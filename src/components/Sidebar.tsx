@@ -71,7 +71,7 @@ export function Sidebar({
         </div>
       </div>
 
-      {/* 鏂板璇濇寜閽?*/}
+      {/* 新对话按钮 */}
       <div className="px-3 pb-2">
         <Button 
           icon={<AddIcon />}
@@ -84,16 +84,16 @@ export function Sidebar({
             borderRadius: '10px',
           }}
         >
-          鏂扮殑瀵硅瘽
+          新的对话
         </Button>
       </div>
 
-      {/* 浼氳瘽鍒楄〃 */}
+      {/* 会话列表 */}
       <div className="flex-1 overflow-y-auto px-2 py-1 space-y-0.5">
         {sessions.length === 0 && (
           <div className="text-center py-10 px-4">
             <p className="text-xs" style={{ color: 'var(--td-text-color-placeholder)', lineHeight: '1.8' }}>
-              鏆傛棤瀵硅瘽璁板綍<br />寮€濮嬩綘鐨勭涓€娆″€捐瘔
+              暂无对话记录<br />开始你的第一次倾诉
             </p>
           </div>
         )}
@@ -124,7 +124,7 @@ export function Sidebar({
               }}
             >
               <span className="flex-1 truncate text-sm">{session.title}</span>
-              <Tooltip content="鍒犻櫎">
+              <Tooltip content="删除">
                 <Button
                   className="opacity-0 group-hover:opacity-100 transition-opacity"
                   variant="text"
@@ -142,7 +142,7 @@ export function Sidebar({
         })}
       </div>
       
-      {/* 搴曢儴锛氳缃?+ 鐗堟湰淇℃伅 */}
+      {/* 底部：设置 + 版本信息 */}
       <div 
         className="p-3 flex-shrink-0"
         style={{ borderTop: '1px solid var(--td-component-border)' }}
@@ -155,9 +155,9 @@ export function Sidebar({
           theme={isSettingsPage ? 'default' : 'default'}
           style={{ borderRadius: '10px', marginBottom: '8px' }}
         >
-          璁剧疆
+          设置
         </Button>
-        {/* 寮€鍙戣€呬俊鎭拰鐗堟湰鍙?*/}
+        {/* 开发者信息和版本号 */}
         <div className="text-center">
           <p 
             className="text-xs"
