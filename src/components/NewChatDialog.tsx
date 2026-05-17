@@ -14,13 +14,13 @@ interface NewChatDialogProps {
   defaultAgentId?: string;
 }
 
-const ICON_MAP: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
-  Bot,
-  Sparkles,
-  Code,
-  FileText,
-  Globe,
-  Lightbulb,
+const ICON_MAP: Record<string, React.ComponentType<any>> = {
+  Bot: Bot as React.ComponentType<any>,
+  Sparkles: Sparkles as React.ComponentType<any>,
+  Code: Code as React.ComponentType<any>,
+  FileText: FileText as React.ComponentType<any>,
+  Globe: Globe as React.ComponentType<any>,
+  Lightbulb: Lightbulb as React.ComponentType<any>,
 };
 
 export function NewChatDialog({
