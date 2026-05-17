@@ -64,38 +64,38 @@ const PRESET_COLORS = [
 ];
 
 const PERMISSION_MODES: { value: PermissionMode; label: string; description: string }[] = [
-  { value: 'default', label: 'default', description: '默认模式，所有操作需确认' },
-  { value: 'acceptEdits', label: 'acceptEdits', description: '自动批准文件编辑，Bash 仍需确认' },
-  { value: 'plan', label: 'plan', description: '规划模式，仅允许读取操作' },
-  { value: 'bypassPermissions', label: 'bypassPermissions', description: '跳过所有权限检查（谨慎使用）' },
+  { value: 'default', label: 'default', description: '榛樿妯″紡锛屾墍鏈夋搷浣滈渶纭' },
+  { value: 'acceptEdits', label: 'acceptEdits', description: '鑷姩鎵瑰噯鏂囦欢缂栬緫锛孊ash 浠嶉渶纭' },
+  { value: 'plan', label: 'plan', description: '瑙勫垝妯″紡锛屼粎鍏佽璇诲彇鎿嶄綔' },
+  { value: 'bypassPermissions', label: 'bypassPermissions', description: '璺宠繃鎵€鏈夋潈闄愭鏌ワ紙璋ㄦ厧浣跨敤锛? },
 ];
 
 const PRESET_TEMPLATES = [
   {
-    name: '代码助手',
-    description: '专注于编程和代码相关任务',
-    systemPrompt: '你是一个专业的编程助手。你擅长编写、审查和解释代码。请提供清晰、高效且符合最佳实践的代码解决方案。在解释时，请考虑代码的可读性、性能和可维护性。',
+    name: '浠ｇ爜鍔╂墜',
+    description: '涓撴敞浜庣紪绋嬪拰浠ｇ爜鐩稿叧浠诲姟',
+    systemPrompt: '浣犳槸涓€涓笓涓氱殑缂栫▼鍔╂墜銆備綘鎿呴暱缂栧啓銆佸鏌ュ拰瑙ｉ噴浠ｇ爜銆傝鎻愪緵娓呮櫚銆侀珮鏁堜笖绗﹀悎鏈€浣冲疄璺电殑浠ｇ爜瑙ｅ喅鏂规銆傚湪瑙ｉ噴鏃讹紝璇疯€冭檻浠ｇ爜鐨勫彲璇绘€с€佹€ц兘鍜屽彲缁存姢鎬с€?,
     icon: 'Code',
     color: '#0594fa',
   },
   {
-    name: '写作助手',
-    description: '帮助撰写和优化各类文档',
-    systemPrompt: '你是一个专业的写作助手。你擅长撰写、编辑和优化各类文档，包括文章、报告、邮件等。请帮助用户提升文字表达的清晰度、逻辑性和吸引力。',
+    name: '鍐欎綔鍔╂墜',
+    description: '甯姪鎾板啓鍜屼紭鍖栧悇绫绘枃妗?,
+    systemPrompt: '浣犳槸涓€涓笓涓氱殑鍐欎綔鍔╂墜銆備綘鎿呴暱鎾板啓銆佺紪杈戝拰浼樺寲鍚勭被鏂囨。锛屽寘鎷枃绔犮€佹姤鍛娿€侀偖浠剁瓑銆傝甯姪鐢ㄦ埛鎻愬崌鏂囧瓧琛ㄨ揪鐨勬竻鏅板害銆侀€昏緫鎬у拰鍚稿紩鍔涖€?,
     icon: 'FileText',
     color: '#00a870',
   },
   {
-    name: '翻译助手',
-    description: '提供高质量的多语言翻译',
-    systemPrompt: '你是一个专业的翻译助手。你精通多种语言，能够提供准确、自然、符合语境的翻译。请在翻译时保持原文的语气和风格，同时确保目标语言的地道表达。',
+    name: '缈昏瘧鍔╂墜',
+    description: '鎻愪緵楂樿川閲忕殑澶氳瑷€缈昏瘧',
+    systemPrompt: '浣犳槸涓€涓笓涓氱殑缈昏瘧鍔╂墜銆備綘绮鹃€氬绉嶈瑷€锛岃兘澶熸彁渚涘噯纭€佽嚜鐒躲€佺鍚堣澧冪殑缈昏瘧銆傝鍦ㄧ炕璇戞椂淇濇寔鍘熸枃鐨勮姘斿拰椋庢牸锛屽悓鏃剁‘淇濈洰鏍囪瑷€鐨勫湴閬撹〃杈俱€?,
     icon: 'Globe',
     color: '#ed7b2f',
   },
   {
-    name: '创意助手',
-    description: '激发灵感，提供创意建议',
-    systemPrompt: '你是一个富有创意的助手。你善于头脑风暴、提供创新想法和独特视角。请帮助用户突破思维定式，探索新的可能性，激发创造力。',
+    name: '鍒涙剰鍔╂墜',
+    description: '婵€鍙戠伒鎰燂紝鎻愪緵鍒涙剰寤鸿',
+    systemPrompt: '浣犳槸涓€涓瘜鏈夊垱鎰忕殑鍔╂墜銆備綘鍠勪簬澶磋剳椋庢毚銆佹彁渚涘垱鏂版兂娉曞拰鐙壒瑙嗚銆傝甯姪鐢ㄦ埛绐佺牬鎬濈淮瀹氬紡锛屾帰绱㈡柊鐨勫彲鑳芥€э紝婵€鍙戝垱閫犲姏銆?,
     icon: 'Lightbulb',
     color: '#a25eb5',
   },
@@ -118,13 +118,12 @@ export function SettingsPage({
     permissionMode: 'default' as PermissionMode,
   });
   
-  // 登录状态
-  const [loginStatus, setLoginStatus] = useState<LoginStatus>({
+  // 鐧诲綍鐘舵€?  const [loginStatus, setLoginStatus] = useState<LoginStatus>({
     isLoggedIn: false,
     checking: true,
   });
   
-  // 环境变量配置
+  // 鐜鍙橀噺閰嶇疆
   const [showEnvConfig, setShowEnvConfig] = useState(false);
   const [envConfig, setEnvConfig] = useState({
     apiKey: '',
@@ -134,8 +133,7 @@ export function SettingsPage({
   });
   const [savingEnv, setSavingEnv] = useState(false);
 
-  // 检查登录状态
-  const checkLoginStatus = useCallback(async () => {
+  // 妫€鏌ョ櫥褰曠姸鎬?  const checkLoginStatus = useCallback(async () => {
     setLoginStatus(prev => ({ ...prev, checking: true, error: undefined }));
     
     try {
@@ -156,17 +154,16 @@ export function SettingsPage({
       setLoginStatus({
         isLoggedIn: false,
         checking: false,
-        error: error?.message || '检查登录状态失败',
+        error: error?.message || '妫€鏌ョ櫥褰曠姸鎬佸け璐?,
       });
     }
   }, []);
   
-  // 保存环境变量配置
+  // 淇濆瓨鐜鍙橀噺閰嶇疆
   const saveEnvConfig = async () => {
-    // 至少需要配置一个有效的值
-    const hasAnyConfig = envConfig.apiKey.trim() || envConfig.authToken.trim();
+    // 鑷冲皯闇€瑕侀厤缃竴涓湁鏁堢殑鍊?    const hasAnyConfig = envConfig.apiKey.trim() || envConfig.authToken.trim();
     if (!hasAnyConfig) {
-      MessagePlugin.warning('请至少配置 API Key 或 Auth Token');
+      MessagePlugin.warning('璇疯嚦灏戦厤缃?API Key 鎴?Auth Token');
       return;
     }
     
@@ -189,20 +186,18 @@ export function SettingsPage({
         MessagePlugin.success(data.message);
         setShowEnvConfig(false);
         setEnvConfig({ apiKey: '', authToken: '', internetEnv: '', baseUrl: '' });
-        // 重新检查登录状态
-        checkLoginStatus();
+        // 閲嶆柊妫€鏌ョ櫥褰曠姸鎬?        checkLoginStatus();
       } else {
-        MessagePlugin.error(data.error || '保存失败');
+        MessagePlugin.error(data.error || '淇濆瓨澶辫触');
       }
     } catch (error: any) {
-      MessagePlugin.error(error?.message || '保存失败');
+      MessagePlugin.error(error?.message || '淇濆瓨澶辫触');
     } finally {
       setSavingEnv(false);
     }
   };
 
-  // 初始化时检查登录状态
-  useEffect(() => {
+  // 鍒濆鍖栨椂妫€鏌ョ櫥褰曠姸鎬?  useEffect(() => {
     checkLoginStatus();
   }, [checkLoginStatus]);
 
@@ -235,16 +230,16 @@ export function SettingsPage({
 
   const handleSave = () => {
     if (!formData.name.trim() || !formData.systemPrompt.trim()) {
-      MessagePlugin.warning('请填写名称和系统提示词');
+      MessagePlugin.warning('璇峰～鍐欏悕绉板拰绯荤粺鎻愮ず璇?);
       return;
     }
 
     if (editingAgent) {
       onUpdate(editingAgent.id, formData);
-      MessagePlugin.success('Agent 已更新');
+      MessagePlugin.success('Agent 宸叉洿鏂?);
     } else {
       onAdd(formData);
-      MessagePlugin.success('Agent 已创建');
+      MessagePlugin.success('Agent 宸插垱寤?);
     }
     resetForm();
   };
@@ -253,13 +248,14 @@ export function SettingsPage({
     setFormData({
       ...template,
       description: template.description,
+      permissionMode: 'default' as PermissionMode,
     });
     setIsCreating(true);
   };
 
   const handleDelete = (id: string) => {
     onDelete(id);
-    MessagePlugin.success('Agent 已删除');
+    MessagePlugin.success('Agent 宸插垹闄?);
   };
 
   const getIconComponent = (iconName: string) => {
@@ -272,20 +268,20 @@ export function SettingsPage({
   return (
     <div className="flex-1 overflow-y-auto p-6">
       <div className="max-w-3xl mx-auto space-y-8">
-        {/* 页面标题 */}
+        {/* 椤甸潰鏍囬 */}
         <div>
           <h1 
             className="text-2xl font-semibold mb-2"
             style={{ color: 'var(--td-text-color-primary)' }}
           >
-            设置
+            璁剧疆
           </h1>
           <p style={{ color: 'var(--td-text-color-secondary)' }}>
-            管理登录配置和自定义 Agent
+            绠＄悊鐧诲綍閰嶇疆鍜岃嚜瀹氫箟 Agent
           </p>
         </div>
 
-        {/* 登录配置 */}
+        {/* 鐧诲綍閰嶇疆 */}
         <div>
           <div className="flex items-center justify-between mb-4">
             <div>
@@ -293,13 +289,13 @@ export function SettingsPage({
                 className="text-lg font-medium"
                 style={{ color: 'var(--td-text-color-primary)' }}
               >
-                登录配置
+                鐧诲綍閰嶇疆
               </h2>
               <p 
                 className="text-sm mt-1"
                 style={{ color: 'var(--td-text-color-secondary)' }}
               >
-                支持环境变量或 CodeBuddy CLI 登录
+                鏀寔鐜鍙橀噺鎴?CodeBuddy CLI 鐧诲綍
               </p>
             </div>
             <Button 
@@ -308,17 +304,17 @@ export function SettingsPage({
               onClick={checkLoginStatus}
               loading={loginStatus.checking}
             >
-              刷新
+              鍒锋柊
             </Button>
           </div>
           
-          {/* 当前状态 */}
+          {/* 褰撳墠鐘舵€?*/}
           <div className="flex items-center gap-3 mb-6">
             {loginStatus.checking ? (
               <>
                 <Loading size="small" />
                 <span style={{ color: 'var(--td-text-color-secondary)' }}>
-                  正在检查登录状态...
+                  姝ｅ湪妫€鏌ョ櫥褰曠姸鎬?..
                 </span>
               </>
             ) : loginStatus.isLoggedIn ? (
@@ -328,10 +324,9 @@ export function SettingsPage({
                   style={{ color: 'var(--td-success-color)' }} 
                 />
                 <span style={{ color: 'var(--td-text-color-primary)' }}>
-                  已登录
-                </span>
+                  宸茬櫥褰?                </span>
                 <Tag size="small" variant="outline">
-                  {loginStatus.method === 'env' ? '环境变量' : 'CLI'}
+                  {loginStatus.method === 'env' ? '鐜鍙橀噺' : 'CLI'}
                 </Tag>
                 {loginStatus.method === 'env' && loginStatus.apiKey && (
                   <span 
@@ -349,20 +344,18 @@ export function SettingsPage({
                   style={{ color: 'var(--td-text-color-placeholder)' }} 
                 />
                 <span style={{ color: 'var(--td-text-color-secondary)' }}>
-                  未登录
-                </span>
+                  鏈櫥褰?                </span>
               </>
             )}
           </div>
           
-          {/* 环境变量配置 */}
+          {/* 鐜鍙橀噺閰嶇疆 */}
           <div className="mb-6">
             <h3 
               className="text-sm font-medium mb-3"
               style={{ color: 'var(--td-text-color-secondary)' }}
             >
-              方式一：环境变量
-            </h3>
+              鏂瑰紡涓€锛氱幆澧冨彉閲?            </h3>
             
             {showEnvConfig ? (
               <div className="space-y-3">
@@ -379,7 +372,7 @@ export function SettingsPage({
                       size="small"
                       value={envConfig.apiKey}
                       onChange={(v) => setEnvConfig(prev => ({ ...prev, apiKey: v as string }))}
-                      placeholder="API 密钥（推荐）"
+                      placeholder="API 瀵嗛挜锛堟帹鑽愶級"
                     />
                   </div>
                   <div>
@@ -394,7 +387,7 @@ export function SettingsPage({
                       size="small"
                       value={envConfig.authToken}
                       onChange={(v) => setEnvConfig(prev => ({ ...prev, authToken: v as string }))}
-                      placeholder="认证令牌"
+                      placeholder="璁よ瘉浠ょ墝"
                     />
                   </div>
                   <div>
@@ -408,7 +401,7 @@ export function SettingsPage({
                       size="small"
                       value={envConfig.internetEnv}
                       onChange={(v) => setEnvConfig(prev => ({ ...prev, internetEnv: v as any }))}
-                      placeholder="网络环境（可选）"
+                      placeholder="缃戠粶鐜锛堝彲閫夛級"
                       clearable
                       options={[
                         { label: 'internal', value: 'internal' },
@@ -427,7 +420,7 @@ export function SettingsPage({
                       size="small"
                       value={envConfig.baseUrl}
                       onChange={(v) => setEnvConfig(prev => ({ ...prev, baseUrl: v as string }))}
-                      placeholder="自定义 URL（可选）"
+                      placeholder="鑷畾涔?URL锛堝彲閫夛級"
                     />
                   </div>
                 </div>
@@ -438,7 +431,7 @@ export function SettingsPage({
                     onClick={saveEnvConfig}
                     loading={savingEnv}
                   >
-                    保存
+                    淇濆瓨
                   </Button>
                   <Button 
                     size="small"
@@ -448,14 +441,13 @@ export function SettingsPage({
                       setEnvConfig({ apiKey: '', authToken: '', internetEnv: '', baseUrl: '' });
                     }}
                   >
-                    取消
+                    鍙栨秷
                   </Button>
                   <span 
                     className="text-xs"
                     style={{ color: 'var(--td-text-color-placeholder)' }}
                   >
-                    仅当前进程有效
-                  </span>
+                    浠呭綋鍓嶈繘绋嬫湁鏁?                  </span>
                 </div>
               </div>
             ) : (
@@ -464,18 +456,18 @@ export function SettingsPage({
                 size="small"
                 onClick={() => setShowEnvConfig(true)}
               >
-                配置环境变量
+                閰嶇疆鐜鍙橀噺
               </Button>
             )}
           </div>
           
-          {/* CLI 登录 */}
+          {/* CLI 鐧诲綍 */}
           <div>
             <h3 
               className="text-sm font-medium mb-3"
               style={{ color: 'var(--td-text-color-secondary)' }}
             >
-              方式二：CodeBuddy CLI
+              鏂瑰紡浜岋細CodeBuddy CLI
             </h3>
             <div className="flex items-center gap-3">
               <code 
@@ -493,7 +485,7 @@ export function SettingsPage({
                 theme="primary"
                 size="small"
               >
-                查看文档
+                鏌ョ湅鏂囨。
               </Link>
             </div>
           </div>
@@ -515,25 +507,25 @@ export function SettingsPage({
           }} 
         />
 
-        {/* Agent 配置 */}
+        {/* Agent 閰嶇疆 */}
         <div>
           <div className="mb-4">
             <h2 
               className="text-lg font-medium"
               style={{ color: 'var(--td-text-color-primary)' }}
             >
-              Agent 配置
+              Agent 閰嶇疆
             </h2>
             <p 
               className="text-sm mt-1"
               style={{ color: 'var(--td-text-color-secondary)' }}
             >
-              创建和管理自定义 Agent
+              鍒涘缓鍜岀鐞嗚嚜瀹氫箟 Agent
             </p>
           </div>
 
           <div className="space-y-6">
-              {/* 创建/编辑表单 */}
+              {/* 鍒涘缓/缂栬緫琛ㄥ崟 */}
               {isCreating ? (
                 <div 
                   className="p-5 rounded-xl border"
@@ -545,29 +537,29 @@ export function SettingsPage({
                   <div className="space-y-4">
                     <div className="flex justify-between items-center mb-2">
                       <h4 className="text-base font-medium" style={{ color: 'var(--td-text-color-primary)' }}>
-                        {editingAgent ? '编辑 Agent' : '创建新 Agent'}
+                        {editingAgent ? '缂栬緫 Agent' : '鍒涘缓鏂?Agent'}
                       </h4>
-                      <Button variant="text" onClick={resetForm}>取消</Button>
+                      <Button variant="text" onClick={resetForm}>鍙栨秷</Button>
                     </div>
                     
                     <Form labelAlign="top">
-                      <Form.FormItem label="名称" requiredMark>
+                      <Form.FormItem label="鍚嶇О" requiredMark>
                         <Input 
                           value={formData.name}
                           onChange={(v) => setFormData(prev => ({ ...prev, name: v as string }))}
-                          placeholder="例如：代码助手"
+                          placeholder="渚嬪锛氫唬鐮佸姪鎵?
                         />
                       </Form.FormItem>
                       
-                      <Form.FormItem label="描述">
+                      <Form.FormItem label="鎻忚堪">
                         <Input 
                           value={formData.description}
                           onChange={(v) => setFormData(prev => ({ ...prev, description: v as string }))}
-                          placeholder="简短描述这个 Agent 的用途"
+                          placeholder="绠€鐭弿杩拌繖涓?Agent 鐨勭敤閫?
                         />
                       </Form.FormItem>
                       
-                      <Form.FormItem label="图标和颜色">
+                      <Form.FormItem label="鍥炬爣鍜岄鑹?>
                         <div className="flex gap-4">
                           <div className="flex gap-2">
                             {PRESET_ICONS.map(({ name, icon: Icon }) => (
@@ -602,7 +594,7 @@ export function SettingsPage({
                         </div>
                       </Form.FormItem>
                       
-                      <Form.FormItem label="权限模式">
+                      <Form.FormItem label="鏉冮檺妯″紡">
                         <Select
                           value={formData.permissionMode}
                           onChange={(v) => setFormData(prev => ({ ...prev, permissionMode: v as PermissionMode }))}
@@ -623,31 +615,30 @@ export function SettingsPage({
                         </Select>
                       </Form.FormItem>
                       
-                      <Form.FormItem label="系统提示词" requiredMark>
+                      <Form.FormItem label="绯荤粺鎻愮ず璇? requiredMark>
                         <Textarea 
                           value={formData.systemPrompt}
                           onChange={(v) => setFormData(prev => ({ ...prev, systemPrompt: v as string }))}
-                          placeholder="定义 Agent 的行为和能力..."
+                          placeholder="瀹氫箟 Agent 鐨勮涓哄拰鑳藉姏..."
                           autosize={{ minRows: 4, maxRows: 8 }}
                         />
                       </Form.FormItem>
                     </Form>
                     
                     <div className="flex justify-end gap-2 pt-2">
-                      <Button variant="outline" onClick={resetForm}>取消</Button>
+                      <Button variant="outline" onClick={resetForm}>鍙栨秷</Button>
                       <Button theme="primary" onClick={handleSave}>
-                        {editingAgent ? '保存修改' : '创建 Agent'}
+                        {editingAgent ? '淇濆瓨淇敼' : '鍒涘缓 Agent'}
                       </Button>
                     </div>
                   </div>
                 </div>
               ) : (
                 <>
-                  {/* 快速模板 */}
+                  {/* 蹇€熸ā鏉?*/}
                   <div>
                     <h4 className="text-sm font-medium mb-3" style={{ color: 'var(--td-text-color-secondary)' }}>
-                      快速创建
-                    </h4>
+                      蹇€熷垱寤?                    </h4>
                     <div className="grid grid-cols-2 gap-3">
                       {PRESET_TEMPLATES.map(template => {
                         const Icon = getIconComponent(template.icon);
@@ -680,21 +671,21 @@ export function SettingsPage({
                     </div>
                   </div>
 
-                  {/* 自定义创建按钮 */}
+                  {/* 鑷畾涔夊垱寤烘寜閽?*/}
                   <Button 
                     icon={<AddIcon />} 
                     variant="dashed" 
                     block 
                     onClick={() => setIsCreating(true)}
                   >
-                    从头创建 Agent
+                    浠庡ご鍒涘缓 Agent
                   </Button>
 
-                  {/* 已有的自定义 Agent */}
+                  {/* 宸叉湁鐨勮嚜瀹氫箟 Agent */}
                   {customAgents.length > 0 && (
                     <div>
                       <h4 className="text-sm font-medium mb-3" style={{ color: 'var(--td-text-color-secondary)' }}>
-                        我的 Agent ({customAgents.length})
+                        鎴戠殑 Agent ({customAgents.length})
                       </h4>
                       <div className="space-y-2">
                         {customAgents.map(agent => {
@@ -721,7 +712,7 @@ export function SettingsPage({
                                   </div>
                                 </div>
                                 <div className="flex gap-1">
-                                  <Tooltip content="编辑">
+                                  <Tooltip content="缂栬緫">
                                     <Button 
                                       variant="text" 
                                       shape="circle" 
@@ -732,12 +723,12 @@ export function SettingsPage({
                                   </Tooltip>
                                   <Popconfirm
                                     key={agent.id}
-                                    content="确定删除这个 Agent 吗？"
+                                    content="纭畾鍒犻櫎杩欎釜 Agent 鍚楋紵"
                                     onConfirm={() => handleDelete(agent.id)}
                                     destroyOnClose
                                   >
                                     <span>
-                                      <Tooltip content="删除">
+                                      <Tooltip content="鍒犻櫎">
                                         <Button 
                                           variant="text" 
                                           shape="circle" 
