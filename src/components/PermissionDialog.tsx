@@ -18,15 +18,15 @@ interface PermissionDialogProps {
 }
 
 // 工具名称到图标和颜色的映射
-const TOOL_CONFIG: Record<string, { icon: React.ReactNode; color: string; label: string }> = {
-  'Bash': { icon: <TerminalIcon />, color: '#e34d59', label: '执行命令' },
-  'Write': { icon: <EditIcon />, color: '#0052d9', label: '写入文件' },
-  'Edit': { icon: <EditIcon />, color: '#0052d9', label: '编辑文件' },
-  'Read': { icon: <FileIcon />, color: '#2ba471', label: '读取文件' },
-  'ListDir': { icon: <FolderOpenIcon />, color: '#ed7b2f', label: '列出目录' },
-  'Search': { icon: <SearchIcon />, color: '#8a6be5', label: '搜索' },
-  'Grep': { icon: <SearchIcon />, color: '#8a6be5', label: '文本搜索' },
-  'Delete': { icon: <DeleteIcon />, color: '#e34d59', label: '删除文件' },
+const TOOL_CONFIG: Record<string, { icon: () => React.ReactElement; color: string; label: string }> = {
+  'Bash': { icon: () => <TerminalIcon />, color: '#e34d59', label: '执行命令' },
+  'Write': { icon: () => <EditIcon />, color: '#0052d9', label: '写入文件' },
+  'Edit': { icon: () => <EditIcon />, color: '#0052d9', label: '编辑文件' },
+  'Read': { icon: () => <FileIcon />, color: '#2ba471', label: '读取文件' },
+  'ListDir': { icon: () => <FolderOpenIcon />, color: '#ed7b2f', label: '列出目录' },
+  'Search': { icon: () => <SearchIcon />, color: '#8a6be5', label: '搜索' },
+  'Grep': { icon: () => <SearchIcon />, color: '#8a6be5', label: '文本搜索' },
+  'Delete': { icon: () => <DeleteIcon />, color: '#e34d59', label: '删除文件' },
 };
 
 // 获取工具配置
@@ -89,7 +89,7 @@ export function PermissionDialog({ visible, request, onAllow, onDeny }: Permissi
       visible={visible}
       header={
         <div className="flex items-center gap-2">
-          <span style={{ color: toolConfig.color }}>{toolConfig.icon}</span>
+          <span style={{ color: toolConfig.color }}>{toolConfig.icon()}</span>
           <span>权限确认</span>
         </div>
       }
@@ -114,7 +114,7 @@ export function PermissionDialog({ visible, request, onAllow, onDeny }: Permissi
           <Tag 
             theme="primary" 
             variant="light"
-            icon={toolConfig.icon}
+            icon={toolConfig.icon()}
           >
             {toolConfig.label}
           </Tag>
@@ -151,19 +151,9 @@ export function PermissionDialog({ visible, request, onAllow, onDeny }: Permissi
           ) : inputItems.length > 0 ? (
             // 其他工具使用描述列表
             <Descriptions 
-              column={1} 
-              itemStyle={{ 
-                paddingBottom: '8px'
-              }}
-              labelStyle={{
-                width: '80px',
-                color: 'var(--td-text-color-secondary)'
-              }}
-              contentStyle={{
-                fontFamily: 'monospace',
-                fontSize: '13px',
-                wordBreak: 'break-all'
-              }}
+              layout="horizontal"
+              bordered
+              colon={false}
             >
               {inputItems.map((item, index) => (
                 <Descriptions.Item key={index} label={item.label}>
