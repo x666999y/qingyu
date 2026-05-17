@@ -103,8 +103,8 @@ app.post("/api/sessions", (req, res) => {
       id: uuidv4(),
       title,
       model: ZHIPU_MODEL,
-      created_at: now,
-      updated_at: now
+      createdAt: now,
+      updatedAt: now
     });
     
     res.json({ session });
@@ -297,9 +297,9 @@ app.post("/api/chat", async (req, res) => {
       id: sessionId || uuidv4(),
       title: message.slice(0, 20) + (message.length > 20 ? '...' : ''),
       model: ZHIPU_MODEL,
-      sdk_session_id: null,
-      created_at: now,
-      updated_at: now
+      sdkSessionId: null,
+      createdAt: now,
+      updatedAt: now
     });
   }
 
