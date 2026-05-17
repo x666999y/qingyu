@@ -11,7 +11,8 @@ import {
   MessageCircle,
 } from 'lucide-react';
 
-// Icon 鏄犲皠锛堝崏璇紶蹇冩墿灞曠増锛?export const ICON_MAP: Record<string, React.ComponentType<any>> = {
+// Icon 映射（卉语传心扩展版）
+export const ICON_MAP: Record<string, React.ComponentType<any>> = {
   Bot: Bot as React.ComponentType<any>,
   Sparkles: Sparkles as React.ComponentType<any>,
   Code: Code as React.ComponentType<any>,
