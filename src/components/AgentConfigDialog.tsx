@@ -253,13 +253,15 @@ export function AgentConfigDialog({
                 {PRESET_TEMPLATES.map(template => {
                   const Icon = getIconComponent(template.icon);
                   return (
-                    <Card 
-                      key={template.name} 
-                      bordered 
-                      hoverShadow
-                      className="cursor-pointer transition-all"
-                      onClick={() => handleUseTemplate(template)}
-                    >
+                      <div 
+                        key={template.name} 
+                        className="cursor-pointer transition-all"
+                        onClick={() => handleUseTemplate(template)}
+                      >
+                        <Card 
+                          bordered 
+                          className="h-full"
+                        >
                       <div className="flex items-center gap-3 p-2">
                         <div 
                           className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -277,6 +279,7 @@ export function AgentConfigDialog({
                         </div>
                       </div>
                     </Card>
+                  </div>
                   );
                 })}
               </div>
